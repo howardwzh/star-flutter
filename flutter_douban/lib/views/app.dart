@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home/home.dart';
-import 'activity/activity.dart';
-import 'account/account.dart';
+import 'home/index.dart';
+import 'activity/index.dart';
+import 'account/index.dart';
 
 class App extends StatefulWidget {
   @override
