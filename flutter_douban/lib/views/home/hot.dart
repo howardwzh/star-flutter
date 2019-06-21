@@ -6,12 +6,35 @@ class Hot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 200,
       padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-      child: Container(
-        child: Text('TODO: 热卖'),
-        height: 200,
-        alignment: Alignment.topLeft,
-        color: Colors.blueAccent,
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: 50,
+            child: Row(
+              children: <Widget>[
+                Container(
+                  width: 60,
+                  child: Text('热卖', style: TextStyle(fontSize: 20.0))
+                ),
+                Expanded(
+                  child: Text('专属你的购物指南', textAlign: TextAlign.right,)
+                )
+              ],
+            )  
+          ),
+          Expanded(
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+                Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
+                Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
+                Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
+              ],
+            )
+          )
+        ],
       )
     );
   }

@@ -61,7 +61,7 @@ class _SortState extends State<Sort> with SingleTickerProviderStateMixin {
               controller: _tabController,
               children: myTabs.map((Tab tab) {
                 return Row(children: <Widget>[
-                  Expanded(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150,),),
+                  Expanded(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
                   Expanded(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
                   Expanded(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
                 ]);

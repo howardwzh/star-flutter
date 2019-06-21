@@ -16,8 +16,7 @@ class _MySwiperState extends State<MySwiper> {
           return new Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill,);
         },
         itemCount: 4,
-        pagination: new SwiperPagination(),
-        control: new SwiperControl(),
+        pagination: new SwiperPagination()
       ),
       height: 200
     );
