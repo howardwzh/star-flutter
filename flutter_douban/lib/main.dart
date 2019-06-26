@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:fluro/fluro.dart';
+import 'routers/routers.dart';
+import 'routers/application.dart';
 import 'views/app.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  MyApp() {
+    final router = new Router();
+    Routes.configureRoutes(router);
+    Application.router = router;
+  }
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

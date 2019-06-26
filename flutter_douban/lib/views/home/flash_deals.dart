@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../routers/application.dart';
 
 class FlashDeals extends StatelessWidget {
   const FlashDeals({Key key}) : super(key: key);
@@ -28,7 +29,9 @@ class FlashDeals extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
+                GestureDetector(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150), onTap: () {
+                  Application.router.navigateTo(context, '/search-result');       
+                }),
                 Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
                 Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
               ],
