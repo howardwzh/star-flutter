@@ -3,6 +3,7 @@ import 'my_swiper.dart';
 import 'flash_deals.dart';
 import 'hot.dart';
 import 'sort.dart';
+import '../../routers/application.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -15,7 +16,29 @@ class _HomeState extends State<Home> {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          MySwiper(),
+          Stack(
+            children: <Widget>[
+              MySwiper(),
+              Positioned(
+                right: 0,
+                left: 0,
+                child: TextField(
+                  cursorWidth: 0,
+                  onTap: (){
+                    Application.router.navigateTo(context, '/search-result');
+                  },
+                  decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.search, color: Colors.white),
+                    ),
+                    hintText: 'Search...',
+                    hintStyle: TextStyle(color: Colors.white),
+                    contentPadding: EdgeInsets.all(14.0),
+                  ),
+                )
+              ),
+            ],
+          ),
           FlashDeals(),
           Hot(),
           Sort(title: '服装', subclass: [{'id': '1', 'name': '男装'}, {'id': '2', 'name': '女装'}, {'id': '2', 'name': '童装'}, {'id': '2', 'name': '内衣'}]),

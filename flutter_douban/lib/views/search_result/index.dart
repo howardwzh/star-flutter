@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import '../../routers/application.dart';
+import './productItem.dart';
 import './search.dart';
 import './sort.dart';
 
@@ -23,9 +23,13 @@ class _SearchResultState extends State<SearchResult> {
           )
         )
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
-          Text('结果列表:xxxx'),
+          ProductItem(),
+          ProductItem(),
+          ProductItem(),
+          ProductItem(),
+          ProductItem()
         ],
       ),
     );

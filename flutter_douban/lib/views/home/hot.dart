@@ -28,9 +28,9 @@ class Hot extends StatelessWidget {
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
-                Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
-                Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
-                Container(child: Image.network("http://via.placeholder.com/350x150",fit: BoxFit.fill, height: 150),),
+                Container(child: Image(image: AssetImage('assets/images/banner-cera.jpg'), fit: BoxFit.fill,),),
+                Container(child: Image(image: AssetImage('assets/images/banner-cera.jpg'), fit: BoxFit.fill,),),
+                Container(child: Image(image: AssetImage('assets/images/banner-cera.jpg'), fit: BoxFit.fill,),),
               ],
             )
           )
