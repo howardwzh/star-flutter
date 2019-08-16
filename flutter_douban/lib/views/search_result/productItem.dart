@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../routers/application.dart';
 
 class ProductItem extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _ProductItemState extends State<ProductItem> {
     return RaisedButton(
       color: Color.fromRGBO(255, 255, 255, 1),
       onPressed: () {
-        print('000');
+        Application.router.navigateTo(context, '/product');
       },
       child: Row(
         children: <Widget>[

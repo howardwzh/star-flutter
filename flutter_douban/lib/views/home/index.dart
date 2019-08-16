@@ -16,9 +16,11 @@ class _HomeState extends State<Home> {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
+          // CircularProgressIndicator(),
+          // LinearProgressIndicator(),
           Stack(
             children: <Widget>[
-              MySwiper(),
+              MySwiper(dataList: [{'imgSrc': 'assets/images/banner-cera.jpg', 'id': 'xxxxx', 'title': '衣服'},{'imgSrc': 'assets/images/banner-cera.jpg', 'id': 'xxxxx', 'title': '衣服'},{'imgSrc': 'assets/images/banner-cera.jpg', 'id': 'xxxxx', 'title': '衣服'},{'imgSrc': 'assets/images/banner-cera.jpg', 'id': 'xxxxx', 'title': '衣服'}]),
               Positioned(
                 right: 0,
                 left: 0,
@@ -30,6 +32,7 @@ class _HomeState extends State<Home> {
                   decoration: InputDecoration(
                     suffixIcon: IconButton(
                       icon: Icon(Icons.search, color: Colors.white),
+                      onPressed: null
                     ),
                     hintText: 'Search...',
                     hintStyle: TextStyle(color: Colors.white),

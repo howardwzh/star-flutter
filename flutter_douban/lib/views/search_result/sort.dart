@@ -34,26 +34,79 @@ class _SortState extends State<Sort> {
       child: Row(
         children: <Widget>[
           Expanded(
-            child: DropdownButtonHideUnderline(
-              child: DropdownButton(
-                style: TextStyle(
-                  color: Color.fromRGBO(0, 0, 0, 1),
-                ),
-                hint: Text('请选择'),
-                items: getListData(),
-                value: sort1,
-                //下拉菜单item点击之后的回调
-                onChanged: (T){
-                  setState(() {
-                    sort1 = T;
-                  });
-                }
+            child: Center(
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton(
+                  style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1)
+                  ),
+                  hint: Text('请选择'),
+                  items: getListData(),
+                  value: sort1,
+                  //下拉菜单item点击之后的回调
+                  onChanged: (T){
+                    setState(() {
+                      sort1 = T;
+                    });
+                  }
+                )
               )
             )
           ),
-          Expanded(child: Text('销量', textAlign: TextAlign.center),),
-          Expanded(child: Text('服务', textAlign: TextAlign.center),),
-          Expanded(child: Text('筛选', textAlign: TextAlign.center),),
+          Expanded(child: Center(
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton(
+                  style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1)
+                  ),
+                  hint: Text('请选择'),
+                  items: getListData(),
+                  value: sort1,
+                  //下拉菜单item点击之后的回调
+                  onChanged: (T){
+                    setState(() {
+                      sort1 = T;
+                    });
+                  }
+                )
+              )
+            )),
+          Expanded(child: Center(
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton(
+                  style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1)
+                  ),
+                  hint: Text('请选择'),
+                  items: getListData(),
+                  value: sort1,
+                  //下拉菜单item点击之后的回调
+                  onChanged: (T){
+                    setState(() {
+                      sort1 = T;
+                    });
+                  }
+                )
+              )
+            )),
+          Expanded(child: Center(
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton(
+                  style: TextStyle(
+                    color: Color.fromRGBO(0, 0, 0, 1)
+                  ),
+                  hint: Text('请选择'),
+                  items: getListData(),
+                  value: sort1,
+                  //下拉菜单item点击之后的回调
+                  onChanged: (T){
+                    setState(() {
+                      sort1 = T;
+                    });
+                  }
+                )
+              )
+            )),
         ],
       ),
       height: 48.0,
