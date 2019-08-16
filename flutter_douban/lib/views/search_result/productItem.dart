@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../routers/application.dart';
+import '../../routers/routers.dart';
 
 class ProductItem extends StatefulWidget {
   @override
@@ -13,7 +14,7 @@ class _ProductItemState extends State<ProductItem> {
     return RaisedButton(
       color: Color.fromRGBO(255, 255, 255, 1),
       onPressed: () {
-        Application.router.navigateTo(context, '/product');
+        Application.router.navigateTo(context, '${Routes.product}?title=${Uri.encodeComponent('索爱（soaiy） 5.0 真无线蓝牙耳机')}&id=333');
       },
       child: Row(
         children: <Widget>[

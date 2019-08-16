@@ -46,6 +46,11 @@ flutter:
     - assets/images/logo.png
     - assets/images/prod-iphone.jpg
     - assets/images/banner-cera.jpg
+    - assets/images/pro1.jpg
+    - assets/images/pro2.jpg
+    - assets/images/pro3.jpg
+    - assets/images/pro4.jpg
+    - assets/images/pro5.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

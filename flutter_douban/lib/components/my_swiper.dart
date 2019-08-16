@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import '../../routers/application.dart';
-import '../../routers/routers.dart';
+import '../routers/application.dart';
+import '../routers/routers.dart';
 
 class MySwiper extends StatefulWidget {
   final List dataList;
@@ -23,7 +23,10 @@ class _MySwiperState extends State<MySwiper> {
         itemCount: widget.dataList.length,
         pagination: new SwiperPagination(),
         onTap: (index) {
-          Application.router.navigateTo(context, '${Routes.product}?title=${Uri.encodeComponent(widget.dataList[index]['title'])}&id=${widget.dataList[index]['id']}');
+          var title = widget.dataList[index]['title'];
+          if (title != null) {
+            Application.router.navigateTo(context, '${Routes.product}?title=${Uri.encodeComponent(title)}&id=${widget.dataList[index]['id']}');
+          }
         }
       ),
       height: 200

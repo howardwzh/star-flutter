@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'my_swiper.dart';
 import 'flash_deals.dart';
 import 'hot.dart';
 import 'sort.dart';
+import '../../components/my_swiper.dart';
 import '../../routers/application.dart';
 
 class Home extends StatefulWidget {

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../components/my_swiper.dart';
+import '../../components/image_list.dart';
 
 class Product extends StatefulWidget {
   final String title;
@@ -15,15 +17,11 @@ class _ProductState extends State<Product> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromRGBO(255, 255, 255, 1),
-      appBar: AppBar(title: Text('详情-${widget.title}')),
+      appBar: AppBar(title: Text('${widget.title}')),
       body: ListView(
         children: <Widget>[
-          Text('xxxxx'),
-          Text('xxxxx'),
-          Text('xxxxx'),
-          Text('xxxxx'),
-          Text('xxxxx'),
-          Text('xxxxx'),
+          MySwiper(dataList: [{'imgSrc': 'assets/images/banner-cera.jpg'},{'imgSrc': 'assets/images/banner-cera.jpg'},{'imgSrc': 'assets/images/banner-cera.jpg'},{'imgSrc': 'assets/images/banner-cera.jpg'}]),
+          ImageList(),
         ],
       )
     );
