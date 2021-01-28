@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../home/home_page.dart';
+import '../animation/animation_page.dart';
 import '../root/root.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -76,6 +77,15 @@ class _WelcomePageState extends State<WelcomePage> {
                   }));
                 },
                 child: Text('马上体验'),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  //导航到新路由
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return AnimationPage();
+                  }));
+                },
+                child: Text('体验动画'),
               )
             ],
           ),
