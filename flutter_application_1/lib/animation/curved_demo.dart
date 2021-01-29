@@ -8,7 +8,8 @@ class CurvedAnimationDemo extends StatefulWidget {
 class _CurvedAnimationDemo extends State<CurvedAnimationDemo>
     with SingleTickerProviderStateMixin {
   AnimationController _animationController;
-  Animation _animation;
+  Animation _animationWidthHeight;
+  Animation _animationColor;
   @override
   void initState() {
     _animationController =
@@ -18,9 +19,10 @@ class _CurvedAnimationDemo extends State<CurvedAnimationDemo>
       setState(() {});
     });
 
-    _animation =
-        CurvedAnimation(parent: _animationController, curve: Curves.easeIn);
-    _animation = Tween(begin: 100.0, end: 300.0).animate(_animation);
+    _animationWidthHeight = Tween(begin: 100.0, end: 300.0).animate(
+        CurvedAnimation(parent: _animationController, curve: Curves.easeIn));
+    _animationColor = ColorTween(begin: Colors.red, end: Colors.blue).animate(
+        CurvedAnimation(parent: _animationController, curve: Curves.easeIn));
     super.initState();
   }
 
@@ -39,9 +41,9 @@ class _CurvedAnimationDemo extends State<CurvedAnimationDemo>
         Expanded(
           child: Center(
             child: Container(
-              width: _animation.value,
-              height: _animation.value,
-              color: Colors.red,
+              width: _animationWidthHeight.value,
+              height: _animationWidthHeight.value,
+              color: _animationColor.value,
             ),
           ),
         ),

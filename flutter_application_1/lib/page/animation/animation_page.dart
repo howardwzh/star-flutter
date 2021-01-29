@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../animation/linear_demo.dart';
 import '../../animation/curved_demo.dart';
+import '../../animation/switcher_demo.dart';
+import '../../animation/switcher_pro_demo.dart';
 
 class AnimationPage extends StatefulWidget {
   static final String sName = '/animation';
@@ -44,6 +46,8 @@ class AnimationPageState extends State<AnimationPage> {
         children: <Widget>[
           LinearAnimationDemo(),
           CurvedAnimationDemo(),
+          AnimatedSwitcherCounterRoute(),
+          AnimatedSwitcherProCounterRoute()
         ],
       ),
     );
